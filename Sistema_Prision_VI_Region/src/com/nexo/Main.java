@@ -1,13 +1,30 @@
 package com.nexo;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
+import com.formdev.flatlaf.intellijthemes.FlatGradiantoDarkFuchsiaIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialOceanicIJTheme;
+
+import javax.swing.*;
+
 public class Main {
 
     public static void main(String[] args) {
-	Login GUILogin = new Login();
+
+
+        try {
+            UIManager.setLookAndFeel( new FlatGradiantoDarkFuchsiaIJTheme());
+        } catch( Exception ex ) {
+            System.err.println( "Failed to initialize LaF" );
+        }
+
+        UIManager.put( "Button.arc", 999 );
+        UIManager.put( "Component.arc", 999 );
+        UIManager.put( "ProgressBar.arc", 999 );
+        UIManager.put( "TextComponent.arc", 999 );
+
+        SwingUtilities.invokeLater(() -> new Login());
+
     }
 
-    /*
-    LINEAS DE TEXTPO PARA AUMENTAR LA CANTIDAD DE  BYTES DEL PROGRAMA XDXDXDXDXDLFKSJFLKSDFJLSKDFJSLDKFJSLKDFJLSDKJFLSDKFJSLDKFJSLKDFJSLKDJFSDLKFJSLKDFJSLKDFJSLKDF
 
-     */
 }

@@ -27,7 +27,15 @@ public class Login extends JFrame{
         btn_IngresarLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Guardan la ventana con la informacion
+                setVisible(true); // Mostrar ventana
+                setVisible(false); // Ocultar ventana
 
+                // Elimina la ventana de la RAM
+                dispose(); // Pitearse ventanas
+
+                // Llamar ventanas siempre (creo)
+                new Menu().setVisible(true);
             }
         });
 

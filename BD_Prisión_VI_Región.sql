@@ -16,6 +16,16 @@ CREATE TABLE Turnos(
     PRIMARY KEY(id)
 );
 
+CREATE TABLE S_horario(
+    id INT AUTO_INCREMENT,
+    tipo VARCHAR(20),
+    inicio_horario TIME,
+    fin_horario TIME,
+
+    PRIMARY KEY(id),
+    UNIQUE(tipo)
+);
+
 CREATE TABLE P_sector(
     id INT AUTO_INCREMENT,
     nombre VARCHAR(20),
@@ -55,26 +65,11 @@ CREATE TABLE Delitos(
 );
 
 CREATE TABLE Celda(
-    celda_num INT(5),
+    celda_num INT,
     FK_p_sector INT,
 
     PRIMARY KEY(celda_num),
     FOREIGN KEY(FK_P_sector) REFERENCES P_sector(id)
-);
-
-CREATE TABLE Prisionero(
-    id INT AUTO_INCREMENT,
-    rut VARCHAR(12), -- Se comprobara con rut de la tabla Condena. -- 
-    nombre VARCHAR(20),
-    apellido VARCHAR(20),
-    edad INT(5),
-    FK_celda_num INT(5),
-    FK_condena INT(5),
-
-    PRIMARY KEY(id),
-    FOREIGN KEY(FK_celda_num) REFERENCES Celda(id),
-    FOREIGN KEY(FK_condena) REFERENCES Condena(id),
-    UNIQUE(rut)
 );
 
 CREATE TABLE delit_conden(
@@ -94,9 +89,31 @@ CREATE TABLE turno_guardia(
 
     PRIMARY KEY(id),
     FOREIGN KEY(FK_guardia) REFERENCES Guardia(rut),
-    FOREIGN KEY(FK_turno) REFERENCES Turno(id)
+    FOREIGN KEY(FK_turno) REFERENCES Turnos(id)
 );
 
--- INSERTS DE DATOS --
+CREATE TABLE Prisionero(
+    id INT AUTO_INCREMENT,
+    rut VARCHAR(12), -- Se comprobara con rut de la tabla Condena. -- 
+    nombre VARCHAR(20),
+    apellido VARCHAR(20),
+    edad INT(5),
+    FK_celda_num INT,
 
---NDEAH
+    PRIMARY KEY(id),
+    FOREIGN KEY(FK_celda_num) REFERENCES Celda(celda_num),
+    UNIQUE(rut)
+);
+
+CREATE TABLE horario_sector(
+    id INT AUTO_INCREMENT,
+    FK_S_horario INT,
+    FK_P_sector INT,
+
+    PRIMARY KEY(id),
+    FOREIGN KEY(FK_S_horario) REFERENCES S_horario(id),
+    FOREIGN KEY(FK_P_sector) REFERENCES P_sector(id)
+);
+
+-- INSERTS DE DATOS EN TABLA --
+

@@ -12,7 +12,7 @@ public class Main {
 
 
         try {
-            UIManager.setLookAndFeel( new FlatMaterialOceanicIJTheme());
+            UIManager.setLookAndFeel( new FlatGradiantoDarkFuchsiaIJTheme());
         } catch( Exception ex ) {
             System.err.println( "Failed to initialize LaF" );
         }

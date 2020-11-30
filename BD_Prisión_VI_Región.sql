@@ -49,7 +49,7 @@ CREATE TABLE Guardia(
     apellido VARCHAR(20),
     edad INT(5),
     rango VARCHAR(20),
-    contraseña VARCHAR(50),
+    contrasena VARCHAR(50),
     FK_p_sector INT(5),
 
 
@@ -60,7 +60,7 @@ CREATE TABLE Guardia(
 CREATE TABLE Condena(
     id INT AUTO_INCREMENT,
     rut VARCHAR(12), -- Se comprobara con rut de la tabla prisionero. -- 
-    P_años INT(15),
+    P_anos INT(15),
     descripcion VARCHAR(200),
     
     PRIMARY KEY(id)
@@ -70,7 +70,7 @@ CREATE TABLE Delitos(
     id INT AUTO_INCREMENT,
     nombre VARCHAR(50),
     descripcion VARCHAR(500),
-    años VARCHAR(20),
+    anos_prision VARCHAR(20),
 
     PRIMARY KEY(id)
 );

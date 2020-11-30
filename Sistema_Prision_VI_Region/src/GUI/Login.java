@@ -1,4 +1,6 @@
-package com.nexo;
+package GUI;
+
+import GUI.Menu;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

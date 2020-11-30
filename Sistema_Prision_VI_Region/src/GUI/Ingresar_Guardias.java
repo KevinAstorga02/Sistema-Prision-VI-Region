@@ -1,4 +1,4 @@
-package com.nexo;
+package GUI;
 
 public class Ingresar_Guardias {
 }

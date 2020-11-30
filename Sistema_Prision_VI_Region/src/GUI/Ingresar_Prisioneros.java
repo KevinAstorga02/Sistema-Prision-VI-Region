@@ -1,4 +1,4 @@
-package com.nexo;
+package GUI;
 
 import javax.swing.*;
 

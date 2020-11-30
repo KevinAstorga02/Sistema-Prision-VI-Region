@@ -36,7 +36,8 @@ CREATE TABLE P_sector(
 
 CREATE TABLE Celda(
     celda_num INT,
-    FK_p_sector INT,
+    cantidad_actual INT(2),
+    FK_p_sector INT,    
 
     PRIMARY KEY(celda_num),
     FOREIGN KEY(FK_P_sector) REFERENCES P_sector(id)

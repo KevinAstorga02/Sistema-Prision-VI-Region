@@ -24,6 +24,7 @@ public class Login extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         add(pnl_Login);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         //Boton Ingresar Pantalla Login
         btn_IngresarLogin.addActionListener(new ActionListener() {

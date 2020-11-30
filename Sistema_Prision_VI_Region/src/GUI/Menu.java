@@ -19,6 +19,7 @@ public class Menu extends JFrame{
         this.setVisible(true);
         setSize(350, 350);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(pnl_Menu);
 
 

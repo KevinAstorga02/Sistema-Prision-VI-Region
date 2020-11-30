@@ -10,13 +10,18 @@ public class Menu_Prisioneros extends JFrame{
     private JButton btn_VerPrisioneros;
     private JButton otroButton;
     private JPanel pnl_MenuPrisioneros;
+    
 
     public Menu_Prisioneros(){
         super("sdfsdf");
         setVisible(true);
         setSize(350,350);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(pnl_MenuPrisioneros);
+
+
+
 
         btn_IngresarPrisionero.addActionListener(new ActionListener() {
             @Override

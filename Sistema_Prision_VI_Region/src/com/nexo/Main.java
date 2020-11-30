@@ -2,6 +2,7 @@ package com.nexo;
 
 import GUI.Login;
 import com.formdev.flatlaf.intellijthemes.FlatGradiantoDarkFuchsiaIJTheme;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialOceanicIJTheme;
 
 import javax.swing.*;
 
@@ -11,7 +12,7 @@ public class Main {
 
 
         try {
-            UIManager.setLookAndFeel( new FlatGradiantoDarkFuchsiaIJTheme());
+            UIManager.setLookAndFeel( new FlatMaterialOceanicIJTheme());
         } catch( Exception ex ) {
             System.err.println( "Failed to initialize LaF" );
         }
@@ -22,6 +23,8 @@ public class Main {
         UIManager.put( "TextComponent.arc", 999 );
 
         SwingUtilities.invokeLater(() -> new Login());
+
+
 
     }
 

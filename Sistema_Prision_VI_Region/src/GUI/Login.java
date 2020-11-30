@@ -17,21 +17,22 @@ public class Login extends JFrame{
 
 
 
-    Login(){
+    public Login(){
         super("Login");
         setVisible(true);
         setSize(300, 175);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         add(pnl_Login);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         //Boton Ingresar Pantalla Login
         btn_IngresarLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Guardan la ventana con la informacion
-                setVisible(true); // Mostrar ventana
-                setVisible(false); // Ocultar ventana
+                //setVisible(true); // Mostrar ventana
+                //setVisible(false); // Ocultar ventana
 
                 // Elimina la ventana de la RAM
                 dispose(); // Pitearse ventanas

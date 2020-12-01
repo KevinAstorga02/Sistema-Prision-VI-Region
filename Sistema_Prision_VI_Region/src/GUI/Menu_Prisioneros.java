@@ -47,6 +47,14 @@ public class Menu_Prisioneros extends JFrame{
                 new Menu().setVisible(true);
             }
         });
+        //Boton Ver Prisioneros
+        btn_VerPrisioneros.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Menu_Prisioneros().setVisible(true);
+            }
+        });
 
 
     }

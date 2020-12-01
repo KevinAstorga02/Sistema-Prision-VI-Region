@@ -4,13 +4,17 @@ public class Guardia extends Persona {
 
     private String rango;
     private String contrasena;
-    private Integer sector;
+    private String sector;
 
-    public Guardia(String rut, String nombre, String apellido, Integer edad, String rango, String contrasena, Integer sector) {
+    public Guardia(String rut, String nombre, String apellido, Integer edad, String rango, String contrasena, String sector) {
         super(rut, nombre, apellido, edad);
         this.rango = rango;
         this.contrasena = contrasena;
         this.sector = sector;
+    }
+
+    public Guardia() {
+
     }
 
     public String getRango() {
@@ -29,11 +33,11 @@ public class Guardia extends Persona {
         this.contrasena = contrasena;
     }
 
-    public Integer getSector() {
+    public String getSector() {
         return sector;
     }
 
-    public void setSector(Integer sector) {
+    public void setSector(String sector) {
         this.sector = sector;
     }
 }

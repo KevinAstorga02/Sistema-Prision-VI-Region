@@ -24,7 +24,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sistema_Prision_VI_Region/src/Image" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-5.1.6-bin.jar/mysql-connector-java-5.1.6-bin.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -73,10 +73,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606606579264" />
-    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1606680476180">
+    <state x="1228" y="245" key="#com.intellij.ide.util.MemberChooser" timestamp="1606789020504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606680476180" />
+    <state x="1228" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606789020504" />
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1606779006417">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606779006417" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606715840677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -93,10 +97,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606715840677" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1606606963673">
+    <state x="440" y="94" key="SettingsEditor" timestamp="1606779029426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606606963673" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606779029426" />
     <state x="839" y="314" key="UIDesigner.ListEditorDialog" timestamp="1606706264473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

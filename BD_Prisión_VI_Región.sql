@@ -27,20 +27,18 @@ CREATE TABLE S_horario(
 );
 
 CREATE TABLE P_sector(
-    id INT AUTO_INCREMENT,
-    seccion VARCHAR(20),
+    sector VARCHAR(5),
 
-    PRIMARY KEY(id),
-    UNIQUE(seccion)
+    PRIMARY KEY(sector)
 );
 
 CREATE TABLE Celda(
     celda_num INT,
     cantidad_actual INT(2),
-    FK_p_sector INT,    
+    FK_p_sector VARCHAR(5),    
 
     PRIMARY KEY(celda_num),
-    FOREIGN KEY(FK_P_sector) REFERENCES P_sector(id)
+    FOREIGN KEY(FK_P_sector) REFERENCES P_sector(sector)
 );
 
 CREATE TABLE Guardia(
@@ -50,11 +48,11 @@ CREATE TABLE Guardia(
     edad INT(5),
     rango VARCHAR(20),
     contrasena VARCHAR(50),
-    FK_p_sector INT(5),
+    FK_p_sector VARCHAR(5),
 
 
     PRIMARY KEY(rut),
-    FOREIGN KEY(FK_P_sector) REFERENCES P_sector(id)
+    FOREIGN KEY(FK_P_sector) REFERENCES P_sector(sector)
 );
 
 CREATE TABLE Condena(
@@ -111,21 +109,21 @@ CREATE TABLE Prisionero(
 CREATE TABLE horario_sector(
     id INT AUTO_INCREMENT,
     FK_S_horario INT,
-    FK_P_sector INT,
+    FK_P_sector VARCHAR(5),
 
     PRIMARY KEY(id),
     FOREIGN KEY(FK_S_horario) REFERENCES S_horario(id),
-    FOREIGN KEY(FK_P_sector) REFERENCES P_sector(id)
+    FOREIGN KEY(FK_P_sector) REFERENCES P_sector(sector)
 );
 
 -- INGRESO DE DATOS EN LAS TABLAS --
 
 -- INSERTS EN TABLA "P_sector" --
 
-INSERT INTO P_sector VALUES(NULL,"A");
-INSERT INTO P_sector VALUES(NULL,"B");
-INSERT INTO P_sector VALUES(NULL,"C");
-INSERT INTO P_sector VALUES(NULL,"D");
+INSERT INTO P_sector VALUES("A");
+INSERT INTO P_sector VALUES("B");
+INSERT INTO P_sector VALUES("C");
+INSERT INTO P_sector VALUES("D");
 
 -- INSERT EN TABLA "Delitos" --
 
@@ -221,4 +219,4 @@ INSERT INTO Delitos VALUES(NULL,"","","");
 
 --INSERT EN TABLA "Guardia" -- 
 
-INSERT INTO Guardia VALUES("21007790-1","Andres Bastan Ivan","Núñez Torres",18,"Superior","PN69ilike",1);
+INSERT INTO Guardia VALUES("21007790-1","Andres Bastan Ivan","Núñez Torres",18,"Superior","PN69ilike","A");

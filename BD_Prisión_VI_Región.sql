@@ -128,7 +128,7 @@ INSERT INTO P_sector VALUES("D");
 --INSERT EN TABLA "Guardia" -- 
 
 INSERT INTO Guardia VALUES("21007790-1","Andres Bastan Ivan","Núñez Torres",18,"Superior","yeah","A");
-
+INSERT INTO Guardia VALUES("20964741-9","Kevin Leandro","Astorga Molina",18,"Superior","hola123","B");
 -- INSERT EN TABLA "Delitos" --
 
 INSERT INTO Delitos VALUES(NULL,"Homicidio Común",

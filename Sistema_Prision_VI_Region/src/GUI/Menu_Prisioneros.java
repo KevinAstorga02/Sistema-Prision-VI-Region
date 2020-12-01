@@ -8,9 +8,10 @@ public class Menu_Prisioneros extends JFrame{
     private JLabel lbl_MenuPrisioneros;
     private JButton btn_IngresarPrisionero;
     private JButton btn_VerPrisioneros;
-    private JButton otroButton;
+    private JButton btn_EliminarPrisioneros;
     private JPanel pnl_MenuPrisioneros;
-    
+    private JButton btn_Cancelar;
+
 
     public Menu_Prisioneros(){
         super("sdfsdf");
@@ -22,12 +23,36 @@ public class Menu_Prisioneros extends JFrame{
 
 
 
-
+        //Boton Ingresar Prisioneros
         btn_IngresarPrisionero.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new Ingresar_Prisioneros().setVisible(true);
+            }
+        });
+        //Boton Eliminar Prisioneros
+        btn_EliminarPrisioneros.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Eliminar_Prisionero().setVisible(true);
+            }
+        });
+        //Boton Cancelar Menu Prisioneros
+        btn_Cancelar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Menu().setVisible(true);
+            }
+        });
+        //Boton Ver Prisioneros
+        btn_VerPrisioneros.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Menu_Prisioneros().setVisible(true);
             }
         });
 

@@ -1,6 +1,8 @@
 package GUI;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Ingresar_Prisioneros extends JFrame{
     private JPanel pnl_IngresoPrisioneros;
@@ -20,12 +22,24 @@ public class Ingresar_Prisioneros extends JFrame{
     private JLabel lbl_EdadPrisioneroIP;
     private JLabel lbl_SectorPrisioneroIP;
     private JLabel lbl_CeldaPrisioneroIP;
+    private JButton btn_AgregarPrisioneroIP;
+    private JButton btn_CancelarIP;
 
     Ingresar_Prisioneros(){
         super("Ingreso de Prisioneros");
         setVisible(true);
         setSize(500,600);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(pnl_IngresoPrisioneros);
+
+        btn_CancelarIP.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Menu_Prisioneros().setVisible(true);
+
+            }
+        });
     }
 }

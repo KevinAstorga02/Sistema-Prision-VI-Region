@@ -10,5 +10,7 @@
     <orderEntry type="library" name="flatlaf-0.44" level="project" />
     <orderEntry type="library" name="flatlaf-intellij-themes-0.44" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.6-bin" level="project" />
+    <orderEntry type="library" name="flatlaf-0.441" level="project" />
+    <orderEntry type="library" name="flatlaf-intellij-themes-0.441" level="project" />
   </component>
 </module>

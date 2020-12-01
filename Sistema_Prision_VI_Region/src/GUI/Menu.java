@@ -31,5 +31,13 @@ public class Menu extends JFrame{
 
             }
         });
+
+        btn_CerrarSesionMenu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Login().setVisible(true);
+            }
+        });
     }
 }

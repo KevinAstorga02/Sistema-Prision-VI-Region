@@ -24,7 +24,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/flatlaf-intellij-themes-0.44.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Librerias/flatlaf-intellij-themes-0.44.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -77,10 +77,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1228" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606854396815" />
-    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1606851512270">
+    <state x="757" y="405" key="DetectedRootsChooserDialog" timestamp="1606857741491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606851512270" />
+    <state x="757" y="405" key="DetectedRootsChooserDialog/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606857741491" />
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1606857790851">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606857790851" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606856893370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -97,10 +101,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606856893370" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1606851518959">
+    <state x="440" y="94" key="SettingsEditor" timestamp="1606857796160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606851518959" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606857796160" />
     <state x="839" y="314" key="UIDesigner.ListEditorDialog" timestamp="1606706264473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

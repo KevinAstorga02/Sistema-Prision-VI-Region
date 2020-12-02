@@ -1,16 +1,15 @@
 package GUI;
 
 import Conexion.Conexion;
-import DAO.DAO_P_sector;
+import DAO.DAO_Celda;
 import DAO.DAO_Prisionero;
-import Model.P_Sector;
+import Model.Celda;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Ingresar_Prisioneros extends JFrame{
     private JPanel pnl_IngresoPrisioneros;
@@ -18,23 +17,17 @@ public class Ingresar_Prisioneros extends JFrame{
     private JTextField txt_NombrePrisioneroIP;
     private JTextField txt_ApellidoPrisioneroIP;
     private JTextField txt_EdadPrisioneroIP;
-    private JComboBox cbx_IngresarPrisioneroIP;
-    private JComboBox cbx_SectorPrisioneroIP;
-    private JTextField txt_DelitoPrisioneroIP;
-    private JButton btn_AnadirDelitoIP;
-    private JButton btn_EliminarDelitoIP;
-    private JList lst_DelitosIP;
+    private JComboBox cbx_IngresarPrisioneroCeldaIP;
     private JLabel lbl_RutPrisioneroIP;
     private JLabel lbl_NombrePrisioneroIP;
     private JLabel lbl_ApellidoPrisioneroIP;
     private JLabel lbl_EdadPrisioneroIP;
-    private JLabel lbl_SectorPrisioneroIP;
     private JLabel lbl_CeldaPrisioneroIP;
     private JButton btn_AgregarPrisioneroIP;
     private JButton btn_CancelarIP;
 
-    private DAO_P_sector daoSector;
     private DAO_Prisionero daoPrisionero;
+    private DAO_Celda daoCelda;
     private Conexion conect;
 
     Ingresar_Prisioneros(){
@@ -44,6 +37,10 @@ public class Ingresar_Prisioneros extends JFrame{
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(pnl_IngresoPrisioneros);
+
+        DefaultComboBoxModel cbx_model = new DefaultComboBoxModel();
+        cbx_IngresarPrisioneroCeldaIP.setModel(cbx_model);
+
 
         String ip = "localhost";
         String bd = "prision_vi_región";
@@ -58,12 +55,16 @@ public class Ingresar_Prisioneros extends JFrame{
             System.exit(1);
         }
 
-        daoSector = new DAO_P_sector(conect);
         daoPrisionero = new DAO_Prisionero(conect);
+        daoCelda = new DAO_Celda(conect);
 
-        DefaultComboBoxModel cbx_model = new DefaultComboBoxModel();
-        cbx_SectorPrisioneroIP.setModel(cbx_model);
+        ArrayList<Celda> Traerlo;
 
+        Traerlo = daoCelda.MostrarCelda();
+
+        for(Celda p : Traerlo){
+            cbx_model.addElement(p);
+        }
 
         btn_AgregarPrisioneroIP.addActionListener(new ActionListener() {
             @Override
@@ -72,9 +73,7 @@ public class Ingresar_Prisioneros extends JFrame{
                 var nom = txt_NombrePrisioneroIP.getText();
                 var ape = txt_EdadPrisioneroIP.getText();
                 var edad = txt_EdadPrisioneroIP.getText();
-                var sector = "A";
                 var celda = "23";
-                var delit = txt_DelitoPrisioneroIP.getText();
 
                 Integer edad_final = Integer.valueOf(edad);
                 Integer celdad_final = Integer.valueOf(celda);

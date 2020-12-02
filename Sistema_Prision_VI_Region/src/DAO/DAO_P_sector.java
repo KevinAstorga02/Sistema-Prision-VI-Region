@@ -22,9 +22,8 @@ public class DAO_P_sector {
 
 
     public P_Sector MostrarSector(){
-        String sql = ("SELECT * FROM p_sector");
+        String sql = ("SELECT sector FROM p_sector");
         P_Sector oSector = new P_Sector();
-
 
         try {
             Connection con = new_con.getCon();

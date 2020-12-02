@@ -3,18 +3,28 @@ package Model;
 import java.sql.Time;
 
 public class S_Horario {
+
+    private Integer id;
     private String tipo;
     private Time inicio_horario;
     private Time fin_horario;
 
-    public S_Horario(String tipo, Time inicio_horario, Time fin_horario) {
+    public S_Horario() {
+    }
+
+    public S_Horario(Integer id, String tipo, Time inicio_horario, Time fin_horario) {
+        this.id = id;
         this.tipo = tipo;
         this.inicio_horario = inicio_horario;
         this.fin_horario = fin_horario;
     }
 
-    public S_Horario() {
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTipo() {

@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="30475" layout-manager="GridLayoutManager" row-count="12" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="30475" layout-manager="GridLayoutManager" row-count="9" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -72,39 +72,17 @@
               <text value="RUT:"/>
             </properties>
           </component>
-          <component id="2e694" class="javax.swing.JLabel" binding="lbl_SectorPrisioneroIP">
-            <constraints>
-              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Sector:"/>
-            </properties>
-          </component>
           <component id="332d9" class="javax.swing.JLabel" binding="lbl_CeldaPrisioneroIP">
             <constraints>
-              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Celda"/>
             </properties>
           </component>
-          <component id="6ddca" class="javax.swing.JComboBox" binding="cbx_IngresarPrisioneroIP">
-            <constraints>
-              <grid row="7" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="2e783" class="javax.swing.JComboBox" binding="cbx_SectorPrisioneroIP">
+          <component id="6ddca" class="javax.swing.JComboBox" binding="cbx_IngresarPrisioneroCeldaIP">
             <constraints>
               <grid row="6" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="f0fc8" class="javax.swing.JTextField" binding="txt_DelitoPrisioneroIP">
-            <constraints>
-              <grid row="9" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
             </constraints>
             <properties/>
           </component>
@@ -132,30 +110,6 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="76e53" class="javax.swing.JButton" binding="btn_AnadirDelitoIP">
-            <constraints>
-              <grid row="9" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Añadir"/>
-            </properties>
-          </component>
-          <component id="a4bc" class="javax.swing.JButton" binding="btn_EliminarDelitoIP">
-            <constraints>
-              <grid row="9" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Eliminar"/>
-            </properties>
-          </component>
-          <component id="e3d3b" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Delito:"/>
-            </properties>
-          </component>
           <component id="5509a" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -166,7 +120,7 @@
           </component>
           <component id="b55ed" class="javax.swing.JButton" binding="btn_AgregarPrisioneroIP">
             <constraints>
-              <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Agregar"/>
@@ -174,7 +128,7 @@
           </component>
           <component id="86f2" class="javax.swing.JButton" binding="btn_CancelarIP">
             <constraints>
-              <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Cancelar"/>
@@ -182,19 +136,9 @@
           </component>
           <hspacer id="af4b7">
             <constraints>
-              <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
           </hspacer>
-          <component id="abb18" class="javax.swing.JList" binding="lst_DelitosIP">
-            <constraints>
-              <grid row="10" column="1" row-span="1" col-span="4" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="50"/>
-              </grid>
-            </constraints>
-            <properties>
-              <model/>
-            </properties>
-          </component>
         </children>
       </grid>
     </children>

@@ -15,8 +15,8 @@ public class Celda {
 
     }
 
-    public Integer getCelda_num() {
-        return celda_num;
+    public Integer getCelda_num(int celda_num) {
+        return this.celda_num;
     }
 
     public void setCelda_num(Integer celda_num) {

@@ -6,7 +6,6 @@ USE Prision_VI_Región;
 
 -- CREACION DE TABLAS --
 
-
 CREATE TABLE Turnos(
     id INT AUTO_INCREMENT,
     tipo VARCHAR(20),
@@ -204,5 +203,3 @@ INSERT INTO Celda VALUES(17,0,"D");
 INSERT INTO Celda VALUES(18,0,"D");
 INSERT INTO Celda VALUES(19,0,"D");
 INSERT INTO Celda VALUES(20,0,"D");
-
-

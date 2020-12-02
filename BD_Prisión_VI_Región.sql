@@ -179,5 +179,58 @@ con la pena de prisión de uno a tres años e inhabilitación especial para ejer
 o para prestar servicios de toda índole en clínicas, establecimientos o consultorios ginecológicos, públicos o privados, 
 por tiempo de uno a seis años.","1 a 3 años de prisión e inhabilitación para profesión.");
 
---INSERT EN TABLA "Celda" -- 
+--INSERT EN TABLA "Celda" --
 
+INSERT INTO Celda VALUES(1,0,"A");
+INSERT INTO Celda VALUES(2,0,"A");
+INSERT INTO Celda VALUES(3,0,"A");
+INSERT INTO Celda VALUES(4,0,"A");
+INSERT INTO Celda VALUES(5,0,"A");
+
+INSERT INTO Celda VALUES(6,0,"B");
+INSERT INTO Celda VALUES(7,0,"B");
+INSERT INTO Celda VALUES(8,0,"B");
+INSERT INTO Celda VALUES(9,0,"B");
+INSERT INTO Celda VALUES(10,0,"B");
+
+INSERT INTO Celda VALUES(11,0,"C");
+INSERT INTO Celda VALUES(12,0,"C");
+INSERT INTO Celda VALUES(13,0,"C");
+INSERT INTO Celda VALUES(14,0,"C");
+INSERT INTO Celda VALUES(15,0,"C");
+
+INSERT INTO Celda VALUES(16,0,"D");
+INSERT INTO Celda VALUES(17,0,"D");
+INSERT INTO Celda VALUES(18,0,"D");
+INSERT INTO Celda VALUES(19,0,"D");
+INSERT INTO Celda VALUES(20,0,"D");
+
+-- CREACION DE PROCEDIMIENTOS --
+
+DELIMITER //
+
+CREATE PROCEDURE IngresarGuardia(IN rut VARCHAR(12), IN nom VARCHAR(20), IN ape VARCHAR(20), IN edad INT(5),IN rango VARCHAR(20),
+IN contrasena VARCHAR(50), IN sector VARCHAR(5))
+BEGIN
+    INSERT INTO Guardia VALUES((SELECT rut FROM Guardia),nom,ape,edad,rango,contrasena,sector) ;
+END//
+
+
+CREATE PROCEDURE IngresarPrisionero(IN rut VARCHAR(255), IN nom VARCHAR()))
+BEGIN
+    INSERT INTO Guardia VALUES(rut,"Kevin Leandro","Astorga Molina",18,"Superior","hola123","B");
+END//
+
+
+CREATE TABLE Guardia(
+    rut VARCHAR(12),
+    nombre VARCHAR(20),
+    apellido VARCHAR(20),
+    edad INT(5),
+    rango VARCHAR(20),
+    contrasena VARCHAR(50),
+    FK_p_sector VARCHAR(5),
+
+    PRIMARY KEY(rut),
+    FOREIGN KEY(FK_P_sector) REFERENCES P_sector(sector)
+);

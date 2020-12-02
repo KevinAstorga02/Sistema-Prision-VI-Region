@@ -24,6 +24,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Librerias/flatlaf-intellij-themes-0.44.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -31,11 +32,11 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kevin\Documents\GitHub\Sistema-Prision-VI-Region\Sistema_Prision_VI_Region\src\Image" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kevin\Documents\GitHub\Sistema-Prision-VI-Region\Sistema_Prision_VI_Region\src\GUI" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kevin\Documents\GitHub\Sistema-Prision-VI-Region\Sistema_Prision_VI_Region\src\Image" />
     </key>
   </component>
   <component name="RunManager">
@@ -79,6 +80,10 @@
     </state>
     <state x="874" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1606862798290" />
     <state x="1228" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.69.1280.680@0.0.1920.1040" timestamp="1606854396815" />
+    <state x="466" y="278" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606884009066">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="466" y="278" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.768@0.0.1366.768" timestamp="1606884009066" />
     <state x="757" y="405" key="DetectedRootsChooserDialog" timestamp="1606857741491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

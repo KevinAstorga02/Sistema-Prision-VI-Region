@@ -51,8 +51,8 @@ public class DAO_Guardia {
     }
 
     public Guardia EditarGuardia(String rut, String nom, String ape, Integer edad, String rango, String contrasena, String FK_sector){
-        String sql = ("UPDATE guardia SET nombre = '"+nom+"' AND apellido = '"+ape+"' AND edad = '"+edad+"' AND rango = '"+rango+"'" +
-                "AND FK_p_sector = '"+FK_sector+"' WHERE rut = '"+rut+"' AND contrasena = '"+contrasena+"'");
+        String sql = ("UPDATE guardia SET nombre = '"+nom+"', apellido = '"+ape+"', edad = '"+edad+"' , rango = '"+rango+"'" +
+                ", FK_p_sector = '"+FK_sector+"' WHERE rut = '"+rut+"' AND contrasena = '"+contrasena+"'");
         try {
             Connection con =  new_con.getCon();
             Statement st = con.createStatement();

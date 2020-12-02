@@ -10,6 +10,7 @@ public class Menu extends JFrame{
     private JButton btn_PrisionerosMenu;
     private JButton btn_GuardiasMenu;
     private JButton btn_CerrarSesionMenu;
+    private JButton btn_HorarioSector;
 
 
     public Menu(){
@@ -42,6 +43,13 @@ public class Menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new Menu_Guardias().setVisible(true);
+            }
+        });
+        btn_HorarioSector.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Ingresar_Horarios().setVisible(true);
             }
         });
     }

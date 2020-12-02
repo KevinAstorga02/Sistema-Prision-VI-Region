@@ -10,6 +10,7 @@ public class Menu_Guardias extends JFrame {
     private JButton btn_EliminarGuardia;
     private JButton btn_CancelarMG;
     private JPanel pnl_MenuGuardias;
+    private JButton btn_ActualizarGuardia;
 
     Menu_Guardias(){
         super("Menu Guardias");
@@ -52,6 +53,14 @@ public class Menu_Guardias extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new Eliminar_Guardia().setVisible(true);
+            }
+        });
+
+        btn_ActualizarGuardia.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Actualizar_Guardia().setVisible(true);
             }
         });
     }

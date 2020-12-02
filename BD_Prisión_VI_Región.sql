@@ -86,7 +86,6 @@ CREATE TABLE Prisionero(
 
 CREATE TABLE Condena(
     id INT AUTO_INCREMENT,
-    rut VARCHAR(12), -- Se comprobara con rut de la tabla prisionero. --
     P_anos INT(15),
     descripcion VARCHAR(200),
     FK_Prisionero VARCHAR(12),
@@ -179,45 +178,6 @@ INSERT INTO Delitos VALUES(NULL,"Aborto a Terceros consentido",
 con la pena de prisión de uno a tres años e inhabilitación especial para ejercer cualquier profesión sanitaria, 
 o para prestar servicios de toda índole en clínicas, establecimientos o consultorios ginecológicos, públicos o privados, 
 por tiempo de uno a seis años.","1 a 3 años de prisión e inhabilitación para profesión.");
-
-INSERT INTO Delitos VALUES(NULL,"","","");
-
-INSERT INTO Delitos VALUES(NULL,"","","");
-
-INSERT INTO Delitos VALUES(NULL,"","","");
-
-INSERT INTO Delitos VALUES(NULL,"","","");
-
-INSERT INTO Delitos VALUES(NULL,"","","");
-
-INSERT INTO Delitos VALUES(NULL,"","","");
-
-INSERT INTO Delitos VALUES(NULL,"","","");
-
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
-INSERT INTO Delitos VALUES(NULL,"","","");
 
 --INSERT EN TABLA "Celda" -- 
 

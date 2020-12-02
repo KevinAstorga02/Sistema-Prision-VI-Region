@@ -10,12 +10,10 @@ public class Menu extends JFrame{
     private JButton btn_PrisionerosMenu;
     private JButton btn_GuardiasMenu;
     private JButton btn_CerrarSesionMenu;
-    private JPanel pnl_ImageMenu;
-
 
 
     public Menu(){
-        super("asds");
+        super("Menu Carcel");
         this.setVisible(true);
         setSize(350, 350);
         setLocationRelativeTo(null);
@@ -37,6 +35,13 @@ public class Menu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new Login().setVisible(true);
+            }
+        });
+        btn_GuardiasMenu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Menu_Guardias().setVisible(true);
             }
         });
     }

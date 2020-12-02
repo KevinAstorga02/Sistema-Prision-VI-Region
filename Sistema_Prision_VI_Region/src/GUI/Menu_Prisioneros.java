@@ -14,7 +14,7 @@ public class Menu_Prisioneros extends JFrame{
 
 
     public Menu_Prisioneros(){
-        super("sdfsdf");
+        super("Menu Prisioneros");
         setVisible(true);
         setSize(350,350);
         setLocationRelativeTo(null);
@@ -52,7 +52,7 @@ public class Menu_Prisioneros extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                new Menu_Prisioneros().setVisible(true);
+                new Informe_Prisioneros().setVisible(true);
             }
         });
 

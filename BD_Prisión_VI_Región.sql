@@ -179,7 +179,7 @@ con la pena de prisión de uno a tres años e inhabilitación especial para ejer
 o para prestar servicios de toda índole en clínicas, establecimientos o consultorios ginecológicos, públicos o privados, 
 por tiempo de uno a seis años.","1 a 3 años de prisión e inhabilitación para profesión.");
 
---INSERT EN TABLA "Celda" --
+-- INSERT EN TABLA "Celda" --
 
 INSERT INTO Celda VALUES(1,0,"A");
 INSERT INTO Celda VALUES(2,0,"A");

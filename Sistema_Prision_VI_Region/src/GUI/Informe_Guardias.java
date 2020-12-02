@@ -15,6 +15,7 @@ public class Informe_Guardias extends JFrame{
     private JPanel pnl_InformeGuardias;
     private JTable tbl_Guardias;
     private JButton btn_CancelarIG;
+    private JButton btn_RecargarIG;
 
     private DAO_Guardia daoGuardia;
     private Conexion conect;

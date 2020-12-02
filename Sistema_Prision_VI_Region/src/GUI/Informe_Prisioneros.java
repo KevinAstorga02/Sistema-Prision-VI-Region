@@ -9,6 +9,7 @@ public class Informe_Prisioneros extends JFrame {
     private JTable tbl_Prisioneros;
     private JButton btn_VolverIP;
     private JScrollPane jsp_InformePrisioneros;
+    private JButton btn_RecargarIP;
 
     Informe_Prisioneros(){
         super("Informe de Prisioneros");

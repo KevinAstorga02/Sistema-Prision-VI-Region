@@ -1,21 +1,21 @@
 package Model;
 
 public class P_Sector {
-    private String seccion;
 
-    public P_Sector(String seccion) {
-        this.seccion = seccion;
+    private String sector;
+
+    public P_Sector(String sector) {
+        this.sector = sector;
     }
 
     public P_Sector() {
-
     }
 
-    public String getSeccion() {
-        return seccion;
+    public String getSector() {
+        return sector;
     }
 
-    public void setSeccion(String seccion) {
-        this.seccion = seccion;
+    public void setSector(String sector) {
+        this.sector = sector;
     }
 }

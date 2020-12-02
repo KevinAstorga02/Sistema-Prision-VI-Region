@@ -15,8 +15,8 @@ public class DAO_Guardia {
         this.new_con = new_con;
     }
 
-    public Guardia IniciarSesion(String id){
-        String sql = "SELECT * FROM guardia WHERE rut = '"+ id +"'";
+    public Guardia IniciarSesion(String rut){
+        String sql = "SELECT * FROM guardia WHERE rut = '"+ rut +"'";
         Guardia oUsu = new Guardia();
         try{
             Connection con =  new_con.getCon();
@@ -31,4 +31,8 @@ public class DAO_Guardia {
         }
         return oUsu;
     }
+
+   /* public Guardia IngresarGuardia(){
+
+    }*/
 }

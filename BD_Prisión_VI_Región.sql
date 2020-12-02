@@ -50,18 +50,8 @@ CREATE TABLE Guardia(
     contrasena VARCHAR(50),
     FK_p_sector VARCHAR(5),
 
-
     PRIMARY KEY(rut),
     FOREIGN KEY(FK_P_sector) REFERENCES P_sector(sector)
-);
-
-CREATE TABLE Condena(
-    id INT AUTO_INCREMENT,
-    rut VARCHAR(12), -- Se comprobara con rut de la tabla prisionero. -- 
-    P_anos INT(15),
-    descripcion VARCHAR(200),
-    
-    PRIMARY KEY(id)
 );
 
 CREATE TABLE Delitos(
@@ -71,16 +61,6 @@ CREATE TABLE Delitos(
     anos_prision VARCHAR(20),
 
     PRIMARY KEY(id)
-);
-
-CREATE TABLE delit_conden(
-    id INT AUTO_INCREMENT,
-    FK_condena INT,
-    FK_delitos INT,
-
-    PRIMARY KEY(id),
-    FOREIGN KEY(FK_condena) REFERENCES Condena(id),
-    FOREIGN KEY(FK_delitos) REFERENCES Delitos(id)
 );
 
 CREATE TABLE turno_guardia(
@@ -94,16 +74,35 @@ CREATE TABLE turno_guardia(
 );
 
 CREATE TABLE Prisionero(
-    id INT AUTO_INCREMENT,
     rut VARCHAR(12), -- Se comprobara con rut de la tabla Condena. -- 
     nombre VARCHAR(20),
     apellido VARCHAR(20),
     edad INT(5),
     FK_celda_num INT,
 
+    PRIMARY KEY(rut),
+    FOREIGN KEY(FK_celda_num) REFERENCES Celda(celda_num)
+);
+
+CREATE TABLE Condena(
+    id INT AUTO_INCREMENT,
+    rut VARCHAR(12), -- Se comprobara con rut de la tabla prisionero. --
+    P_anos INT(15),
+    descripcion VARCHAR(200),
+    FK_Prisionero VARCHAR(12),
+
     PRIMARY KEY(id),
-    FOREIGN KEY(FK_celda_num) REFERENCES Celda(celda_num),
-    UNIQUE(rut)
+    FOREIGN KEY(FK_Prisionero) REFERENCES Prisionero(rut)
+);
+
+CREATE TABLE delit_conden(
+    id INT AUTO_INCREMENT,
+    FK_condena INT,
+    FK_delitos INT,
+
+    PRIMARY KEY(id),
+    FOREIGN KEY(FK_condena) REFERENCES Condena(id),
+    FOREIGN KEY(FK_delitos) REFERENCES Delitos(id)
 );
 
 CREATE TABLE horario_sector(

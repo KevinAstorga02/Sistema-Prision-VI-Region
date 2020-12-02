@@ -8,6 +8,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class DAO_Guardia {
 
@@ -35,7 +38,7 @@ public class DAO_Guardia {
     }
 
     public Guardia IngresarGuardia(String rut, String nom, String ape, Integer edad, String rango, String contrasena, String FK_sector){
-        String sql = ("INSERT INTO guardia VALUES (NULL,'"+rut+"','"+nom+"','"+ape+"','"+edad+"','"+rango+"','"+contrasena+"','"+FK_sector+"')");
+        String sql = ("INSERT INTO guardia VALUES ('"+rut+"','"+nom+"','"+ape+"','"+edad+"','"+rango+"','"+contrasena+"','"+FK_sector+"')");
         try {
             Connection con =  new_con.getCon();
             Statement st = con.createStatement();
@@ -73,5 +76,33 @@ public class DAO_Guardia {
             throwables.printStackTrace();
         }
         return null;
+    }
+
+    public List<Guardia> ListarGuardias() {
+        String sql = "SELECT * FROM guardia";
+        List<Guardia> list = new ArrayList<>();
+
+        try {
+            Connection con = new_con.getCon();
+            Statement statement = con.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) { // fila por fila
+                String rut = resultSet.getString(1);
+                String nom = resultSet.getString(2);
+                String ape = resultSet.getString(3);
+                Integer edad = resultSet.getInt(4);
+                String rango = resultSet.getString(5);
+                String pass = "-";
+                String FK_Sector = resultSet.getString(7);
+                Guardia x = new Guardia(rut,nom,ape,edad,rango,pass,FK_Sector);
+                list.add(x);
+            }
+            statement.close();
+            return list;
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return Collections.EMPTY_LIST;
     }
 }

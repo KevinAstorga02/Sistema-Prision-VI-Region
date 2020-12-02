@@ -64,14 +64,14 @@ public class Ingresar_Guardias extends JFrame{
                 var d = txt_EdadIG.getText();
                 var rango = txt_RangoIG.getText();
                 var psw = psw_ContraIG.getText();
-                String sector = "";
+                String sector = (String) cbx_SectorIG.getSelectedItem();
 
-                if(cbx_SectorIG.getSelectedIndex() > -1){
-                    sector = (String) cbx_SectorIG.getSelectedItem();
-                }
                 Integer edad = Integer.valueOf(d);
 
                 daoGuardia.IngresarGuardia(rut,nom,ape,edad,rango,psw, sector);
+
+                dispose();
+                new Menu_Guardias().setVisible(true);
             }
         });
 

@@ -62,7 +62,7 @@ public class Actualizar_Guardia extends JFrame{
                 var rut = txt_RutActualizar.getText();
                 var nom = txt_NombreActualizar.getText();
                 var ape = txt_ApellidoActualizar.getText();
-                var d = txt_EdadActualizar.getText();
+                var edad = Integer.valueOf(txt_EdadActualizar.getText());
                 var psw = psw_ContraActualizar.getText();
                 var rang = txt_RangoActualizar.getText();
                 String sector = "";
@@ -70,11 +70,11 @@ public class Actualizar_Guardia extends JFrame{
                 if(cbx_SectorActualizar.getSelectedIndex() > -1){
                     sector = (String) cbx_SectorActualizar.getSelectedItem();
                 }
-                Integer edad = Integer.valueOf(d);
 
                 daoGuardia.EditarGuardia(rut, nom, ape,  edad,  rang, psw, sector);
 
-
+                dispose();
+                new Menu_Guardias().setVisible(true);
             }
         });
 

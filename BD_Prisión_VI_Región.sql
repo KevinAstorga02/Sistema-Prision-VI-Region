@@ -205,32 +205,4 @@ INSERT INTO Celda VALUES(18,0,"D");
 INSERT INTO Celda VALUES(19,0,"D");
 INSERT INTO Celda VALUES(20,0,"D");
 
--- CREACION DE PROCEDIMIENTOS --
 
-DELIMITER //
-
-CREATE PROCEDURE IngresarGuardia(IN rut VARCHAR(12), IN nom VARCHAR(20), IN ape VARCHAR(20), IN edad INT(5),IN rango VARCHAR(20),
-IN contrasena VARCHAR(50), IN sector VARCHAR(5))
-BEGIN
-    INSERT INTO Guardia VALUES((SELECT rut FROM Guardia),nom,ape,edad,rango,contrasena,sector) ;
-END//
-
-
-CREATE PROCEDURE IngresarPrisionero(IN rut VARCHAR(255), IN nom VARCHAR()))
-BEGIN
-    INSERT INTO Guardia VALUES(rut,"Kevin Leandro","Astorga Molina",18,"Superior","hola123","B");
-END//
-
-
-CREATE TABLE Guardia(
-    rut VARCHAR(12),
-    nombre VARCHAR(20),
-    apellido VARCHAR(20),
-    edad INT(5),
-    rango VARCHAR(20),
-    contrasena VARCHAR(50),
-    FK_p_sector VARCHAR(5),
-
-    PRIMARY KEY(rut),
-    FOREIGN KEY(FK_P_sector) REFERENCES P_sector(sector)
-);

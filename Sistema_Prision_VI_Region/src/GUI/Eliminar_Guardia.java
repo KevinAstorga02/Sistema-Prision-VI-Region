@@ -48,6 +48,8 @@ public class Eliminar_Guardia extends JFrame {
                 var psw = txt_ContraEG.getText();
 
                 daoGuardia.EliminarGuardia(rut,psw);
+                dispose();
+                new Menu_Guardias().setVisible(true);
             }
         });
 

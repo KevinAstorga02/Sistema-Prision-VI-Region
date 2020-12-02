@@ -56,29 +56,38 @@ public class Ingresar_Prisioneros extends JFrame{
         }
 
         daoPrisionero = new DAO_Prisionero(conect);
-        daoCelda = new DAO_Celda(conect);
 
-        ArrayList<Celda> Traerlo;
-
-        Traerlo = daoCelda.MostrarCelda();
-
-        for(Celda p : Traerlo){
-            cbx_model.addElement(p);
-        }
+        cbx_model.addElement("1");
+        cbx_model.addElement("2");
+        cbx_model.addElement("3");
+        cbx_model.addElement("4");
+        cbx_model.addElement("5");
+        cbx_model.addElement("6");
+        cbx_model.addElement("7");
+        cbx_model.addElement("8");
+        cbx_model.addElement("9");
+        cbx_model.addElement("10");
 
         btn_AgregarPrisioneroIP.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 var rut = txt_RutPrisioneroIP.getText();
                 var nom = txt_NombrePrisioneroIP.getText();
-                var ape = txt_EdadPrisioneroIP.getText();
-                var edad = txt_EdadPrisioneroIP.getText();
-                var celda = "23";
+                var ape = txt_ApellidoPrisioneroIP.getText();
+                var edad = Integer.valueOf(txt_EdadPrisioneroIP.getText());
+                String celda = "";
 
-                Integer edad_final = Integer.valueOf(edad);
+                if(cbx_IngresarPrisioneroCeldaIP.getSelectedIndex() > -1){
+                    celda = (String) cbx_IngresarPrisioneroCeldaIP.getSelectedItem();
+                }
+
                 Integer celdad_final = Integer.valueOf(celda);
 
-                daoPrisionero.IngresarPrisionero(rut, nom, ape, edad_final, celdad_final);
+                daoPrisionero.IngresarPrisionero(rut, nom, ape, edad, celdad_final);
+
+                dispose();
+                new Menu_Prisioneros().setVisible(true);
+
 
              /*   try {
                     if (rut.isBlank() || rut.isEmpty() || nom.isEmpty() || nom.isBlank() || ape.isEmpty() || ape.isBlank() ||
